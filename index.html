@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- googlefont cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Beauty Store Website</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- announcement -->
+    <div class="w-full bg-gradient-to-r from-pink-500 to-pink-700 text-white text-center py-2 text-sm animate-pulse">
+        🌸 Spring Sale! Enjoy Up To 40% OFF On All Beauty Products ✨
+    </div>
+
+    <!-- navbar -->
+    <header class="w-full bg-white shadow-lg sticky top-0 z-50 fade">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-4 sm:px-6">
+            <h1 class="text-3xl font-extrabold text-pink-600 tracking-wide">BEAUTY<span
+                    class="text-gray-900">STORE</span></h1>
+
+            <!-- desktop menu -->
+            <nav class="hidden md:flex items-center space-x-6 lg-space-x-8 text-gray-700 text-lg">
+                <a href="#home" class="hover:text-pink-600 transition tranform hover-scale-105">Home</a>
+                <a href="#products" class="hover:text-pink-600 transition tranform hover-scale-105">Products</a>
+                <a href="#categories" class="hover:text-pink-600 transition tranform hover-scale-105">Categories</a>
+                <a href="#about" class="hover:text-pink-600 transition tranform hover-scale-105">About</a>
+                <a href="#sale" class="hover:text-pink-600 transition tranform hover-scale-105">Sale</a>
+                <a href="#contact" class="hover:text-pink-600 transition tranform hover-scale-105">Contact</a>
+            </nav>
+
+            <!-- mobile menu Button -->
+            <button class="md:hidden text-3xl" id="menubtn">☰</button>
+        </div>
+
+        <div class="hidden bg-white shadow" id="mobilemenu">
+            <a href="#home" class="block py-3 px-6 border-b hover:bg-pink-50 transition">Home</a>
+            <a href="#products" class="block py-3 px-6 border-b hover:bg-pink-50 transition">Products</a>
+            <a href="#categories" class="block py-3 px-6 border-b hover:bg-pink-50 transition">Categories</a>
+            <a href="#about" class="block py-3 px-6 border-b hover:bg-pink-50 transition">About</a>
+            <a href="#sale" class="block py-3 px-6 border-b hover:bg-pink-50 transition">Sale</a>
+            <a href="#contact" class="block py-3 px-6 hover:bg-pink-50 transition">Contact</a>
+        </div>
+    </header>
+
+    <!-- hero section -->
+    <section id="home"
+        class="max-w-7xl mx-auto sm-py-16 px-4 sm-px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-center fade mt-20">
+        <div class="space-y-5 text-center md:text-left">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900">Discover Your Perfect
+                Glow ✨</h2>
+            <p class="text-gray-600 text-base sm:text-lg">Explore premium skincare and cosmetics designed to nourish
+                your natural beauty.</p>
+            <a href="#products"><button
+                    class="bg-pink-600 text-white px-6 py-2 sm:px-10 sm-py-3 rounded-xl shadow-lg hover:bg-pink-700 transition tranform hover:scale-105">Shop
+                    Now</button></a>
+        </div>
+
+        <div class="w-full h-96 sm-h-80 md-h-96 rounded-2xl shadow-lg overflow-hidden">
+            <img src="./images/Midjourney V5 prompt cosmetics product rendering stock background advertising AI art.jpg"
+                alt="Hero Image" class="w-full h-full object-cover">
+        </div>
+    </section>
+
+    <!-- products -->
+    <section id="products" class="py-12 sm:py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-6">
+
+            <!-- 1 -->
+            <div
+                class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-4 sm:p-5 max-w-xs mx-auto hover:scale-105">
+                <div class="w-full h-64 overflow-hidden rounded-xl">
+                    <img src="./images/product1.jpg" alt="Product 1" class="w-full h-full object-cover object-center">
+                </div>
+                <h3 class="text-lg font-bold mt-4">Hydra Glow Serum</h3>
+                <p class="text-pink-600 font-semibold text-xl">$24.99</p>
+                <button
+                    class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                    to Cart</button>
+            </div>
+
+            <!-- 2 -->
+            <div
+                class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-4 sm:p-5 max-w-xs mx-auto hover:scale-105">
+                <div class="w-full h-64 overflow-hidden rounded-xl">
+                    <img src="./images/product2.jpg" alt="Product 1" class="w-full h-full object-cover object-center">
+                </div>
+                <h3 class="text-lg font-bold mt-4">Vitamin C Booster</h3>
+                <p class="text-pink-600 font-semibold text-xl">$19.99</p>
+                <button
+                    class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                    to Cart</button>
+            </div>
+
+            <!-- 3 -->
+            <div
+                class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-4 sm:p-5 max-w-xs mx-auto hover:scale-105">
+                <div class="w-full h-64 overflow-hidden rounded-xl">
+                    <img src="./images/product3.jpg" alt="Product 1" class="w-full h-full object-cover object-center">
+                </div>
+                <h3 class="text-lg font-bold mt-4">Aloe Vera Gel</h3>
+                <p class="text-pink-600 font-semibold text-xl">$14.99</p>
+                <button
+                    class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                    to Cart</button>
+            </div>
+
+            <!-- 4 -->
+            <div
+                class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-4 sm:p-5 max-w-xs mx-auto hover:scale-105">
+                <div class="w-full h-64 overflow-hidden rounded-xl">
+                    <img src="./images/product4.jpg" alt="Product 1" class="w-full h-full object-cover object-center">
+                </div>
+                <h3 class="text-lg font-bold mt-4">Night Repair Cream</h3>
+                <p class="text-pink-600 font-semibold text-xl">$22.99</p>
+                <button
+                    class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                    to Cart</button>
+            </div>
+
+            <!-- 5 -->
+            <div
+                class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-4 sm:p-5 max-w-xs mx-auto hover:scale-105">
+                <div class="w-full h-64 overflow-hidden rounded-xl">
+                    <img src="./images/product5.jpg" alt="Product 1" class="w-full h-full object-cover object-center">
+                </div>
+                <h3 class="text-lg font-bold mt-4">Hydrating Moisturizer</h3>
+                <p class="text-pink-600 font-semibold text-xl">$22.99</p>
+                <button
+                    class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                    to Cart</button>
+            </div>
+
+            <!-- 6 -->
+            <div
+                class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-4 sm:p-5 max-w-xs mx-auto hover:scale-105">
+                <div class="w-full h-64 overflow-hidden rounded-xl">
+                    <img src="./images/product6.jpg" alt="Product 1" class="w-full h-full object-cover object-center">
+                </div>
+                <h3 class="text-lg font-bold mt-4">Sunscreen SPF 50</h3>
+                <p class="text-pink-600 font-semibold text-xl">$18.99</p>
+                <button
+                    class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                    to Cart</button>
+            </div>
+
+            <!-- 7 -->
+            <div
+                class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-4 sm:p-5 max-w-xs mx-auto hover:scale-105">
+                <div class="w-full h-64 overflow-hidden rounded-xl">
+                    <img src="./images/product7.jpg" alt="Product 1" class="w-full h-full object-cover object-center">
+                </div>
+                <h3 class="text-lg font-bold mt-4">Charcoal Face Mask</h3>
+                <p class="text-pink-600 font-semibold text-xl">$12.99</p>
+                <button
+                    class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                    to Cart</button>
+            </div>
+
+            <!-- 8 -->
+            <div
+                class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-4 sm:p-5 max-w-xs mx-auto hover:scale-105">
+                <div class="w-full h-64 overflow-hidden rounded-xl">
+                    <img src="./images/product8.jpg" alt="Product 1" class="w-full h-full object-cover object-center">
+                </div>
+                <h3 class="text-lg font-bold mt-4">Rose Water Toner</h3>
+                <p class="text-pink-600 font-semibold text-xl">$10.99</p>
+                <button
+                    class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                    to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- categories -->
+    <section id="categories" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 fade">
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12">Trending Categories</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10">
+            <!--1-->
+            <div class="bg-white p-6 shadow rounded-xl text-center hover:scale-105 hover:shadow-xl transition">
+                <div class="w-full h-40 overflow-hidden rounded-xl">
+                    <img src="./images/product1.jpg" class="w-full h-full object-cover" alt="">
+                </div>
+                <h3 class="font-bold text-lg mt-4">Serums</h3>
+            </div>
+
+            <!--2-->
+            <div class="bg-white p-6 shadow rounded-xl text-center hover:scale-105 hover:shadow-xl transition">
+                <div class="w-full h-40 overflow-hidden rounded-xl">
+                    <img src="./images/cat2.jpg" class="w-full h-full object-cover" alt="">
+                </div>
+                <h3 class="font-bold text-lg mt-4">Moisturizers</h3>
+            </div>
+
+            <!--3-->
+            <div class="bg-white p-6 shadow rounded-xl text-center hover:scale-105 hover:shadow-xl transition">
+                <div class="w-full h-40 overflow-hidden rounded-xl">
+                    <img src="./images/cat3.jpg" class="w-full h-full object-cover" alt="">
+                </div>
+                <h3 class="font-bold text-lg mt-4">Face Masks</h3>
+            </div>
+
+            <!--4-->
+            <div class="bg-white p-6 shadow rounded-xl text-center hover:scale-105 hover:shadow-xl transition">
+                <div class="w-full h-40 overflow-hidden rounded-xl">
+                    <img src="./images/cat4.jpg" class="w-full h-full object-cover" alt="">
+                </div>
+                <h3 class="font-bold text-lg mt-4">Toners</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="py-20 bg-pink-50 fade">
+        <div class="max-w-6xl mx-auto text-center px-4 sm-px-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">About Us</h2>
+            <p class="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">We offer a premium selection of clean,
+                cruelty-free beauty products made with dermatologically tested ingredients to ensure natural, glowing
+                skin.</p>
+        </div>
+    </section>
+
+    <!-- sale -->
+    <section class="py-20 bg-pink-100 fade" id="sale">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-14 text-pink-700">Hot Sale 🔥</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-10">
+                <!-- 1 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-5 hover:scale-105">
+                    <div class="w-full h-48 rounded overflow-hidden">
+                        <img src="./images/sal1.jpg" alt="" class="h-full w-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mt-4">Revitalizing Serum</h3>
+                    <p class="text-gray-400 line-through">$29.99</p>
+                    <p class="text-pink-600 font-semibold text-xl">$19.99</p>
+                    <button
+                        class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                        to Cart</button>
+                </div>
+
+                <!-- 2 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-5 hover:scale-105">
+                    <div class="w-full h-48 rounded overflow-hidden">
+                        <img src="./images/sal2.jpg" alt="" class="h-full w-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mt-4">Hydrating Moisturizer</h3>
+                    <p class="text-gray-400 line-through">$25.99</p>
+                    <p class="text-pink-600 font-semibold text-xl">$16.99</p>
+                    <button
+                        class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                        to Cart</button>
+                </div>
+
+                <!-- 3 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-5 hover:scale-105">
+                    <div class="w-full h-48 rounded overflow-hidden">
+                        <img src="./images/sal3.jpg" alt="" class="h-full w-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mt-4">Charcoal Detox Mask</h3>
+                    <p class="text-gray-400 line-through">$18.99</p>
+                    <p class="text-pink-600 font-semibold text-xl">$11.99</p>
+                    <button
+                        class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                        to Cart</button>
+                </div>
+
+                <!-- 4 -->
+                <div class="bg-white rounded-xl shadow hover:shadow-2xl hover-float transition p-5 hover:scale-105">
+                    <div class="w-full h-48 rounded overflow-hidden">
+                        <img src="./images/sal4.jpg" alt="" class="h-full w-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mt-4">Rose Water Toner</h3>
+                    <p class="text-gray-400 line-through">$15.99</p>
+                    <p class="text-pink-600 font-semibold text-xl">$9.99</p>
+                    <button
+                        class="add-to-cart mt-4 w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add
+                        to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--contact-->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 fade">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-10">Contact Us</h2>
+        <form id="contactform" class="max-w-xl mx-auto space-y-4">
+            <input type="text" name="name"
+                class="w-full p-3 border rounded-lg shadow focus:outline-none focus:border-pink-600" placeholder="Name"
+                required>
+            <input type="email" name="email"
+                class="w-full p-3 border rounded-lg shadow focus:outline-none focus:border-pink-600" placeholder="Email"
+                required>
+            <textarea name="message"
+                class="w-full p-3 border rounded-lg shadow focus:outline-none focus:border-pink-600"
+                placeholder="Message" required></textarea>
+            <button type="submit"
+                class="w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition">Send Message</button>
+        </form>
+
+        <div id="formMessage" class="text-center mt-4 text-pink-600 font-semibold"></div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-gray-900 text-white py-14 fade">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-4 sm:px-6">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Beauty Store</h3>
+                <p class="text-gray-300">Radiate confidence with premium beauty products.</p>
+            </div>
+
+            <div>
+                <h4 class="text-xl font-bold mb-4">Shop</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li>Serums</li>
+                    <li>Makeup</li>
+                    <li>Cream</li>
+                    <li>Tools</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xl font-bold mb-3">Support</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li>Privacy Policy</li>
+                    <li>Terms of Condition</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-xl font-bold mb-3"> Contact</h4>
+                <div class="flex space-x-4 text-2xl text-gray-300">
+                    <span>📷</span>
+                    <span>💬</span>
+                    <span>🐦</span>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-gray-500 mt-10">© 2025 Beauty Store – All Rights Reserved</p>
+    </footer>
+</body>
+
+<script src="app.js"></script>
+
+</html>
